@@ -5,6 +5,9 @@ class EntriesController < ApplicationController
 	 def show
 	 	@entry =Entry.find(params["id"])
 	 end
+	 def edit
+  			@entry = Entry.find(params["id"])
+	end
 	 def create
   entry_params = params["entry"]
   entry = Entry.create(entry_params)
